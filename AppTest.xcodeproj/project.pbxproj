@@ -17,9 +17,14 @@
 		6D0F065D27A5ECC600635467 /* AppTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F065C27A5ECC600635467 /* AppTestUITests.swift */; };
 		6D0F065F27A5ECC600635467 /* AppTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F065E27A5ECC600635467 /* AppTestUITestsLaunchTests.swift */; };
 		6D0F066E27A5FE6800635467 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F066C27A5FE6800635467 /* SettingsViewController.swift */; };
-		6D0F066F27A5FE6800635467 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F066D27A5FE6800635467 /* SettingsViewController.xib */; };
 		6D0F067127A6109C00635467 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F067027A6109C00635467 /* GoogleService-Info.plist */; };
 		6D0F067327A610B300635467 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F067227A610B300635467 /* Database.swift */; };
+		6D0F067627A8230500635467 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F067827A8230500635467 /* SettingsViewController.xib */; };
+		6D0F067D27A826FB00635467 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F067F27A826FB00635467 /* Localizable.strings */; };
+		6D0F068827A89BA900635467 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068727A89BA900635467 /* String.swift */; };
+		6D0F068A27A89BBE00635467 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068927A89BBE00635467 /* Bundle.swift */; };
+		6D0F068D27A89BF100635467 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068C27A89BF100635467 /* StringConstants.swift */; };
+		6D0F069027A89C5000635467 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068F27A89C5000635467 /* Localizable.swift */; };
 		7D9ACAF8C92BE284B4D421CB /* Pods_AppTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95ED271196161E65135D426B /* Pods_AppTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,9 +62,15 @@
 		6D0F065C27A5ECC600635467 /* AppTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTestUITests.swift; sourceTree = "<group>"; };
 		6D0F065E27A5ECC600635467 /* AppTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6D0F066C27A5FE6800635467 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		6D0F066D27A5FE6800635467 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		6D0F067027A6109C00635467 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6D0F067227A610B300635467 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		6D0F067727A8230500635467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
+		6D0F067E27A826FB00635467 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6D0F068527A8779800635467 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6D0F068727A89BA900635467 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		6D0F068927A89BBE00635467 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		6D0F068C27A89BF100635467 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		6D0F068F27A89C5000635467 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		73B907DF3A77874C096EC904 /* Pods_AppTest_AppTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTest_AppTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD3166F62E492C5306FA9C6 /* Pods_AppTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9024691707066E6074D547 /* Pods-AppTest-AppTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTest-AppTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppTest-AppTestUITests/Pods-AppTest-AppTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,14 +132,18 @@
 		6D0F063A27A5ECC400635467 /* AppTest */ = {
 			isa = PBXGroup;
 			children = (
+				6D0F068E27A89C4000635467 /* Storage */,
+				6D0F068B27A89BD900635467 /* Constants */,
+				6D0F068627A89B9800635467 /* Extensions */,
 				6D0F063B27A5ECC400635467 /* AppDelegate.swift */,
 				6D0F063D27A5ECC400635467 /* SceneDelegate.swift */,
 				6D0F064427A5ECC600635467 /* Assets.xcassets */,
 				6D0F064627A5ECC600635467 /* LaunchScreen.storyboard */,
 				6D0F064927A5ECC600635467 /* Info.plist */,
 				6D0F066C27A5FE6800635467 /* SettingsViewController.swift */,
-				6D0F066D27A5FE6800635467 /* SettingsViewController.xib */,
+				6D0F067827A8230500635467 /* SettingsViewController.xib */,
 				6D0F067227A610B300635467 /* Database.swift */,
+				6D0F067F27A826FB00635467 /* Localizable.strings */,
 			);
 			path = AppTest;
 			sourceTree = "<group>";
@@ -148,6 +163,31 @@
 				6D0F065E27A5ECC600635467 /* AppTestUITestsLaunchTests.swift */,
 			);
 			path = AppTestUITests;
+			sourceTree = "<group>";
+		};
+		6D0F068627A89B9800635467 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6D0F068727A89BA900635467 /* String.swift */,
+				6D0F068927A89BBE00635467 /* Bundle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6D0F068B27A89BD900635467 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				6D0F068C27A89BF100635467 /* StringConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		6D0F068E27A89C4000635467 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				6D0F068F27A89C5000635467 /* Localizable.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		CB6663E70C81768CB312BBD2 /* Frameworks */ = {
@@ -264,6 +304,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 6D0F062F27A5ECC400635467;
 			productRefGroup = 6D0F063927A5ECC400635467 /* Products */;
@@ -282,9 +323,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D0F067D27A826FB00635467 /* Localizable.strings in Resources */,
 				6D0F064827A5ECC600635467 /* LaunchScreen.storyboard in Resources */,
 				6D0F067127A6109C00635467 /* GoogleService-Info.plist in Resources */,
-				6D0F066F27A5FE6800635467 /* SettingsViewController.xib in Resources */,
+				6D0F067627A8230500635467 /* SettingsViewController.xib in Resources */,
 				6D0F064527A5ECC600635467 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,8 +456,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D0F063C27A5ECC400635467 /* AppDelegate.swift in Sources */,
+				6D0F068A27A89BBE00635467 /* Bundle.swift in Sources */,
 				6D0F063E27A5ECC400635467 /* SceneDelegate.swift in Sources */,
+				6D0F068D27A89BF100635467 /* StringConstants.swift in Sources */,
+				6D0F068827A89BA900635467 /* String.swift in Sources */,
 				6D0F067327A610B300635467 /* Database.swift in Sources */,
+				6D0F069027A89C5000635467 /* Localizable.swift in Sources */,
 				6D0F066E27A5FE6800635467 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +507,23 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		6D0F067827A8230500635467 /* SettingsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D0F067727A8230500635467 /* Base */,
+			);
+			name = SettingsViewController.xib;
+			sourceTree = "<group>";
+		};
+		6D0F067F27A826FB00635467 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D0F067E27A826FB00635467 /* en */,
+				6D0F068527A8779800635467 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -468,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -529,6 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
