@@ -11,13 +11,24 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var buttonsContainer: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setUpView()
+        setUpLabels()
+        setUpViews()
     }
     
-    func setUpView() {
+    func setUpLabels() {
         titleLabel.text = StringConstants.settigs
     }
+    
+    func setUpViews() {
+        stackView.rounded(cornerRadius: 10)
+        buttonsContainer.backgroundColor = .clear
+        buttonsContainer.layer.applyShadow()
+    }
 }
+

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="AppTest" customModuleProvider="target">
             <connections>
                 <outlet property="buttonsContainer" destination="gg7-nt-Q9Y" id="qPZ-eu-kCS"/>
+                <outlet property="stackView" destination="BQ9-ym-sky" id="Oxh-nf-ZbF"/>
                 <outlet property="titleLabel" destination="rZm-rk-MM7" id="zJc-8Y-m2L"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,12 +29,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gg7-nt-Q9Y">
-                    <rect key="frame" x="16" y="157" width="382" height="120"/>
+                    <rect key="frame" x="16" y="157" width="382" height="122"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BQ9-ym-sky">
-                            <rect key="frame" x="0.0" y="0.0" width="382" height="120"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="BQ9-ym-sky">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="122"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFA-wa-LZ4">
+                                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFA-wa-LZ4">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6al-g0-TOy">
@@ -52,8 +53,15 @@
                                         <constraint firstAttribute="height" constant="40" id="wwh-Mz-ZdS"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LW6-qf-fzI">
+                                    <rect key="frame" x="0.0" y="40" width="382" height="1"/>
+                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Bxg-ub-gSW"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDf-6n-78v">
-                                    <rect key="frame" x="0.0" y="40" width="382" height="40"/>
+                                    <rect key="frame" x="0.0" y="41" width="382" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTG-mM-SEm">
                                             <rect key="frame" x="19" y="10" width="41.5" height="21"/>
@@ -71,8 +79,15 @@
                                         <constraint firstAttribute="height" constant="40" id="q9d-PV-7YL"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iK-Ix-9Ey">
+                                    <rect key="frame" x="0.0" y="81" width="382" height="1"/>
+                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="ekh-Mc-adJ"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYg-vT-7Jn">
-                                    <rect key="frame" x="0.0" y="80" width="382" height="40"/>
+                                    <rect key="frame" x="0.0" y="82" width="382" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmu-tm-QuT">
                                             <rect key="frame" x="19" y="10" width="41.5" height="21"/>
@@ -99,11 +114,11 @@
                         <constraint firstItem="BQ9-ym-sky" firstAttribute="top" secondItem="gg7-nt-Q9Y" secondAttribute="top" id="Wsd-9e-5yR"/>
                         <constraint firstAttribute="trailing" secondItem="BQ9-ym-sky" secondAttribute="trailing" id="aj5-5U-B9I"/>
                         <constraint firstAttribute="bottom" secondItem="BQ9-ym-sky" secondAttribute="bottom" id="fBX-WV-wVN"/>
-                        <constraint firstAttribute="height" constant="120" id="qHH-7X-8qM"/>
+                        <constraint firstAttribute="height" constant="122" id="qHH-7X-8qM"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ7-uz-3UR">
-                    <rect key="frame" x="16" y="838" width="382" height="40"/>
+                    <rect key="frame" x="16" y="806" width="382" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="YQs-on-v6Z"/>
                     </constraints>
@@ -120,7 +135,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uQ7-uz-3UR" secondAttribute="trailing" constant="16" id="Hxc-Sj-aAI"/>
                 <constraint firstItem="rZm-rk-MM7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="P7p-FT-TiZ"/>
                 <constraint firstItem="gg7-nt-Q9Y" firstAttribute="top" secondItem="rZm-rk-MM7" secondAttribute="bottom" constant="48" id="Phk-Wu-O5r"/>
-                <constraint firstItem="uQ7-uz-3UR" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="16" id="Wpn-4J-5ZQ"/>
+                <constraint firstItem="uQ7-uz-3UR" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-16" id="Wpn-4J-5ZQ"/>
                 <constraint firstItem="rZm-rk-MM7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ZFf-y8-xke"/>
                 <constraint firstItem="uQ7-uz-3UR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gg7-nt-Q9Y" secondAttribute="bottom" constant="16" id="iIS-OW-E2Z"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gg7-nt-Q9Y" secondAttribute="trailing" constant="16" id="rrK-cL-IQz"/>
@@ -132,6 +147,9 @@
         <namedColor name="GIFFTBackgroundColor">
             <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
