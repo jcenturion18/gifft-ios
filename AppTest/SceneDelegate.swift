@@ -20,10 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .with(database: DataBaseImp())
             .with(wordings: Wordings(localizable: localizable))
             .with(localizable: localizable)
-        
+
         window.rootViewController = UINavigationController(rootViewController: viewController)
         self.window = window
         window.makeKeyAndVisible()
     }
 }
-

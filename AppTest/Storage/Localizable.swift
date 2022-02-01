@@ -13,7 +13,7 @@ protocol Localizable {
 }
 
 extension Localizable {
-    
+
     func nextLanguage() {
         if loadLanguage() == LocalizableOptions.english.rawValue {
             saveLanguage(LocalizableOptions.german)
@@ -27,16 +27,15 @@ enum LocalizableOptions: String {
     case english = "en", german = "de"
 }
 
-
 class LocalizableImp: Localizable {
-        
+
     private let languageKey = "GIFFTCurrentLanguageKey"
-        
+
     func saveLanguage(_ selectedLanguage: LocalizableOptions) {
         UserDefaults.standard.set(selectedLanguage.rawValue, forKey: languageKey)
         UserDefaults.standard.synchronize()
     }
-    
+
     func loadLanguage() -> String {
         UserDefaults.standard.object(forKey: languageKey) as? String ?? LocalizableOptions.english.rawValue
     }

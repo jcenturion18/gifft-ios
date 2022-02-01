@@ -8,7 +8,7 @@
 import Foundation
 
 extension Bundle {
-    
+
     static func localizableBundle(localizable: Localizable) -> Bundle? {
         let bundle: Bundle = .main
         // Try to load from language specific bundle
@@ -16,7 +16,7 @@ extension Bundle {
           let bundle = Bundle(path: path) {
             return bundle
         }
-        
+
         return nil
     }
 }
