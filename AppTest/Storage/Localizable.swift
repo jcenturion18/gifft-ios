@@ -8,32 +8,36 @@
 import UIKit
 
 protocol Localizable {
-    func saveLanguage(_ selectedLanguage: String)
+    func saveLanguage(_ selectedLanguage: LocalizableOptions)
     func loadLanguage() -> String
-    func nextLanguage()
 }
 
+extension Localizable {
+    
+    func nextLanguage() {
+        if loadLanguage() == LocalizableOptions.english.rawValue {
+            saveLanguage(LocalizableOptions.german)
+        } else {
+            saveLanguage(LocalizableOptions.english)
+        }
+    }
+}
+
+enum LocalizableOptions: String {
+    case english = "en", german = "de"
+}
+
+
 class LocalizableImp: Localizable {
-    
-    let english = "en"
-    let german = "de"
-    
+        
     private let languageKey = "GIFFTCurrentLanguageKey"
         
-    func saveLanguage(_ selectedLanguage: String) {
-        UserDefaults.standard.set(selectedLanguage, forKey: languageKey)
+    func saveLanguage(_ selectedLanguage: LocalizableOptions) {
+        UserDefaults.standard.set(selectedLanguage.rawValue, forKey: languageKey)
         UserDefaults.standard.synchronize()
     }
     
     func loadLanguage() -> String {
-        UserDefaults.standard.object(forKey: languageKey) as? String ?? english
-    }
-    
-    func nextLanguage() {
-        if loadLanguage() == english {
-            saveLanguage(german)
-        } else {
-            saveLanguage(english)
-        }
+        UserDefaults.standard.object(forKey: languageKey) as? String ?? LocalizableOptions.english.rawValue
     }
 }
