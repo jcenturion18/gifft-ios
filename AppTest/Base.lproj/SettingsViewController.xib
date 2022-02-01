@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="AppTest" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="uQ7-uz-3UR" id="ia7-Cg-pV4"/>
                 <outlet property="tableView" destination="Geq-g3-hEn" id="AF6-Yd-hwI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

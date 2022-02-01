@@ -5,9 +5,26 @@
 //  Created by Julian Centurion on 31/01/2022.
 //
 
-enum StringConstants {
-    static let settigs = "settings".localized()
-    static let language = "language".localized()
-    static let addUser = "add_user".localized()
-    static let lastUser = "last_user".localized()
+class StringConstants {
+       
+    static func settings() -> String {
+        "settings".localized()
+    }
+    
+    static func language() -> String {
+        "language".localized()
+    }
+    
+    static func addUser() -> String {
+        "add_user".localized()
+    }
+    
+    static func lastUser() -> String {
+        "last_user".localized()
+    }
+    
+    static func finished() -> String {
+        "finished".localized()
+    }
 }
+

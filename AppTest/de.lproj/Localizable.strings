@@ -1,4 +1,5 @@
 "settings" = "Einstellungen";
-"languaje" = "Sprache";
+"language" = "Sprache";
 "add_user" = "Nutzer hinzufügen";
 "last_user" = "Letzter benutzer: ";
+"finished" = "Fertig";
