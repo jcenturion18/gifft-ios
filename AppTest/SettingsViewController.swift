@@ -17,6 +17,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     private var database: DataBaseInterface?
     private var wordings: Wordings?
     private var localizable: Localizable?
+    private var lastUser: User?
     
     // MARK: Builder
     func with(database: DataBaseInterface) -> SettingsViewController {
@@ -42,6 +43,13 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        database?.loadUserName { user in
+            self.lastUser = user
+            self.tableView.reloadData()
+        }
+        
+        
         setUpLabels()
     }
     
@@ -68,8 +76,12 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             cell.textLabel?.text = wordings?.addUser()
             break
         case 2:
-            let userNameText = wordings!.lastUser()
-            cell.textLabel?.text = "\(userNameText) \(DataBaseImp.loadUserName())"
+            var userNameText = wordings!.lastUser()
+            
+            if let lastUser = lastUser, let name = lastUser.name {
+                userNameText = "\(userNameText) \(name)"
+            }
+            cell.textLabel?.text = "\(userNameText)"
             break
         default:
             break
@@ -106,7 +118,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
 
         let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned alert] _ in
             let userName = alert.textFields?[0].text ?? ""
-            DataBaseImp.store(userName: userName)
+            self.database?.store (userName: userName)
         }
 
         alert.addAction(submitAction)
