@@ -15,7 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UINavigationController(rootViewController: SettingsViewController())
+        let localizable = LocalizableImp()
+        let viewController = SettingsViewController()
+            .with(database: DataBaseImp())
+            .with(wordings: Wordings(localizable: localizable))
+            .with(localizable: localizable)
+        
+        window.rootViewController = UINavigationController(rootViewController: viewController)
         self.window = window
         window.makeKeyAndVisible()
     }

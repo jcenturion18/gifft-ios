@@ -23,7 +23,7 @@
 		6D0F067D27A826FB00635467 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F067F27A826FB00635467 /* Localizable.strings */; };
 		6D0F068827A89BA900635467 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068727A89BA900635467 /* String.swift */; };
 		6D0F068A27A89BBE00635467 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068927A89BBE00635467 /* Bundle.swift */; };
-		6D0F068D27A89BF100635467 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068C27A89BF100635467 /* StringConstants.swift */; };
+		6D0F068D27A89BF100635467 /* Wordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068C27A89BF100635467 /* Wordings.swift */; };
 		6D0F069027A89C5000635467 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068F27A89C5000635467 /* Localizable.swift */; };
 		7D9ACAF8C92BE284B4D421CB /* Pods_AppTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95ED271196161E65135D426B /* Pods_AppTest.framework */; };
 /* End PBXBuildFile section */
@@ -69,7 +69,7 @@
 		6D0F068527A8779800635467 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D0F068727A89BA900635467 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		6D0F068927A89BBE00635467 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
-		6D0F068C27A89BF100635467 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		6D0F068C27A89BF100635467 /* Wordings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordings.swift; sourceTree = "<group>"; };
 		6D0F068F27A89C5000635467 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		73B907DF3A77874C096EC904 /* Pods_AppTest_AppTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTest_AppTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD3166F62E492C5306FA9C6 /* Pods_AppTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +142,6 @@
 				6D0F064927A5ECC600635467 /* Info.plist */,
 				6D0F066C27A5FE6800635467 /* SettingsViewController.swift */,
 				6D0F067827A8230500635467 /* SettingsViewController.xib */,
-				6D0F067227A610B300635467 /* Database.swift */,
 				6D0F067F27A826FB00635467 /* Localizable.strings */,
 			);
 			path = AppTest;
@@ -177,7 +176,7 @@
 		6D0F068B27A89BD900635467 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				6D0F068C27A89BF100635467 /* StringConstants.swift */,
+				6D0F068C27A89BF100635467 /* Wordings.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -185,6 +184,7 @@
 		6D0F068E27A89C4000635467 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				6D0F067227A610B300635467 /* Database.swift */,
 				6D0F068F27A89C5000635467 /* Localizable.swift */,
 			);
 			path = Storage;
@@ -458,7 +458,7 @@
 				6D0F063C27A5ECC400635467 /* AppDelegate.swift in Sources */,
 				6D0F068A27A89BBE00635467 /* Bundle.swift in Sources */,
 				6D0F063E27A5ECC400635467 /* SceneDelegate.swift in Sources */,
-				6D0F068D27A89BF100635467 /* StringConstants.swift in Sources */,
+				6D0F068D27A89BF100635467 /* Wordings.swift in Sources */,
 				6D0F068827A89BA900635467 /* String.swift in Sources */,
 				6D0F067327A610B300635467 /* Database.swift in Sources */,
 				6D0F069027A89C5000635467 /* Localizable.swift in Sources */,
@@ -664,7 +664,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.AppTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.apptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -691,7 +691,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.AppTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.apptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -9,10 +9,10 @@ import Foundation
 
 extension Bundle {
     
-    static func localizableBundle() -> Bundle? {
+    static func localizableBundle(localizable: Localizable) -> Bundle? {
         let bundle: Bundle = .main
         // Try to load from language specific bundle
-        if let path = bundle.path(forResource: Localizable.loadLanguage(), ofType: "lproj"),
+        if let path = bundle.path(forResource: localizable.loadLanguage(), ofType: "lproj"),
           let bundle = Bundle(path: path) {
             return bundle
         }

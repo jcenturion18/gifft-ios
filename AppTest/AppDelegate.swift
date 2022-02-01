@@ -15,10 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow()
-        window?.rootViewController = UINavigationController(rootViewController: SettingsViewController())
+        DataBaseImp.setUpProvider()
+        
+        let localizable = LocalizableImp()
+        let viewController = SettingsViewController()
+            .with(database: DataBaseImp())
+            .with(wordings: Wordings(localizable: localizable))
+            .with(localizable: localizable)
+        
+        window?.rootViewController = UINavigationController(rootViewController: viewController)
         window?.makeKeyAndVisible()
         
-        DataBaseImp.setUpProvider()
         return true
     }
 

@@ -14,6 +14,26 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     let cellReuseIdentifier = "TableViewCell"
     
+    private var database: DataBaseInterface?
+    private var wordings: Wordings?
+    private var localizable: Localizable?
+    
+    // MARK: Builder
+    func with(database: DataBaseInterface) -> SettingsViewController {
+        self.database = database
+        return self
+    }
+    
+    func with(wordings: Wordings) -> SettingsViewController {
+        self.wordings = wordings
+        return self
+    }
+    
+    func with(localizable: Localizable) -> SettingsViewController {
+        self.localizable = localizable
+        return self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,8 +46,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func setUpLabels() {
-        navigationItem.title = StringConstants.settings()
-        button.setTitle(StringConstants.finished(), for: .normal)
+        navigationItem.title = wordings?.settings()
+        button.setTitle(wordings?.finished(), for: .normal)
     }
     
     // MARK: UITableViewDataSource
@@ -42,13 +62,14 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         switch(indexPath.row) {
         case 0:
-            cell.textLabel?.text = StringConstants.language()
+            cell.textLabel?.text = wordings?.language()
             break
         case 1:
-            cell.textLabel?.text = StringConstants.addUser()
+            cell.textLabel?.text = wordings?.addUser()
             break
         case 2:
-            cell.textLabel?.text = StringConstants.lastUser()
+            let userNameText = wordings!.lastUser()
+            cell.textLabel?.text = "\(userNameText) \(DataBaseImp.loadUserName())"
             break
         default:
             break
@@ -62,14 +83,34 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         case 0:
             changeLanguage()
             break
+        case 1:
+            openInputDialog()
+            break
         default:
             break
         }
     }
     
     func changeLanguage() {
-        Localizable.nextLanguage()
+        localizable?.nextLanguage()
         setUpLabels()
         tableView.reloadData()
     }
+        
+    func openInputDialog() {
+        let alert = UIAlertController(title: "Enter user name", message: nil, preferredStyle: .alert)
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "User name"
+        }
+
+        let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned alert] _ in
+            let userName = alert.textFields?[0].text ?? ""
+            DataBaseImp.store(userName: userName)
+        }
+
+        alert.addAction(submitAction)
+        present(alert, animated: true)
+    }
 }
+
