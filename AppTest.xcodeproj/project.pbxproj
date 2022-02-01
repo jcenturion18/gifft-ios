@@ -13,7 +13,6 @@
 		6D0F063E27A5ECC400635467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F063D27A5ECC400635467 /* SceneDelegate.swift */; };
 		6D0F064527A5ECC600635467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F064427A5ECC600635467 /* Assets.xcassets */; };
 		6D0F064827A5ECC600635467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F064627A5ECC600635467 /* LaunchScreen.storyboard */; };
-		6D0F065327A5ECC600635467 /* AppTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F065227A5ECC600635467 /* AppTestTests.swift */; };
 		6D0F065D27A5ECC600635467 /* AppTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F065C27A5ECC600635467 /* AppTestUITests.swift */; };
 		6D0F065F27A5ECC600635467 /* AppTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F065E27A5ECC600635467 /* AppTestUITestsLaunchTests.swift */; };
 		6D0F066E27A5FE6800635467 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F066C27A5FE6800635467 /* SettingsViewController.swift */; };
@@ -25,6 +24,9 @@
 		6D0F068A27A89BBE00635467 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068927A89BBE00635467 /* Bundle.swift */; };
 		6D0F068D27A89BF100635467 /* Wordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068C27A89BF100635467 /* Wordings.swift */; };
 		6D0F069027A89C5000635467 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F068F27A89C5000635467 /* Localizable.swift */; };
+		6D0F069C27A9D73C00635467 /* SettingsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F069B27A9D73C00635467 /* SettingsViewControllerTests.swift */; };
+		6D0F069F27A9E2C800635467 /* DatabaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F069E27A9E2C700635467 /* DatabaseMock.swift */; };
+		6D0F06A127A9E2F100635467 /* LocalizableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F06A027A9E2F100635467 /* LocalizableMock.swift */; };
 		7D9ACAF8C92BE284B4D421CB /* Pods_AppTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95ED271196161E65135D426B /* Pods_AppTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +59,6 @@
 		6D0F064727A5ECC600635467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D0F064927A5ECC600635467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D0F064E27A5ECC600635467 /* AppTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D0F065227A5ECC600635467 /* AppTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTestTests.swift; sourceTree = "<group>"; };
 		6D0F065827A5ECC600635467 /* AppTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0F065C27A5ECC600635467 /* AppTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTestUITests.swift; sourceTree = "<group>"; };
 		6D0F065E27A5ECC600635467 /* AppTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -71,6 +72,9 @@
 		6D0F068927A89BBE00635467 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		6D0F068C27A89BF100635467 /* Wordings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordings.swift; sourceTree = "<group>"; };
 		6D0F068F27A89C5000635467 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		6D0F069B27A9D73C00635467 /* SettingsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTests.swift; sourceTree = "<group>"; };
+		6D0F069E27A9E2C700635467 /* DatabaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseMock.swift; sourceTree = "<group>"; };
+		6D0F06A027A9E2F100635467 /* LocalizableMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableMock.swift; sourceTree = "<group>"; };
 		73B907DF3A77874C096EC904 /* Pods_AppTest_AppTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTest_AppTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD3166F62E492C5306FA9C6 /* Pods_AppTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9024691707066E6074D547 /* Pods-AppTest-AppTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTest-AppTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppTest-AppTestUITests/Pods-AppTest-AppTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +154,8 @@
 		6D0F065127A5ECC600635467 /* AppTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				6D0F065227A5ECC600635467 /* AppTestTests.swift */,
+				6D0F069D27A9E24E00635467 /* Mocks */,
+				6D0F069B27A9D73C00635467 /* SettingsViewControllerTests.swift */,
 			);
 			path = AppTestTests;
 			sourceTree = "<group>";
@@ -188,6 +193,15 @@
 				6D0F068F27A89C5000635467 /* Localizable.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		6D0F069D27A9E24E00635467 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				6D0F069E27A9E2C700635467 /* DatabaseMock.swift */,
+				6D0F06A027A9E2F100635467 /* LocalizableMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		CB6663E70C81768CB312BBD2 /* Frameworks */ = {
@@ -470,7 +484,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D0F065327A5ECC600635467 /* AppTestTests.swift in Sources */,
+				6D0F069F27A9E2C800635467 /* DatabaseMock.swift in Sources */,
+				6D0F06A127A9E2F100635467 /* LocalizableMock.swift in Sources */,
+				6D0F069C27A9D73C00635467 /* SettingsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
