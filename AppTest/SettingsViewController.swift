@@ -44,18 +44,20 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        database?.loadUserName { user in
-            self.lastUser = user
-            self.tableView.reloadData()
-        }
-        
-        
+        loadUserName()
         setUpLabels()
     }
     
     func setUpLabels() {
         navigationItem.title = wordings?.settings()
         button.setTitle(wordings?.finished(), for: .normal)
+    }
+    
+    func loadUserName() {
+        database?.loadUserName { user in
+            self.lastUser = user
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: UITableViewDataSource
@@ -89,7 +91,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
-    
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch(indexPath.row){
         case 0:
@@ -102,7 +104,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             break
         }
     }
-    
+        
     func changeLanguage() {
         localizable?.nextLanguage()
         setUpLabels()
