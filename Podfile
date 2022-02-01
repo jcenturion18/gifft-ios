@@ -5,8 +5,8 @@ target 'AppTest' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for AppTest
-  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
   target 'AppTestTests' do
     inherit! :search_paths

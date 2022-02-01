@@ -16,19 +16,20 @@ protocol DataBaseInterface {
 class DataBaseImp : DataBaseInterface {
     
     static func setUpProvider() {
-        /*FirebaseApp.configure()
-        
-        var ref: DatabaseReference!
+        FirebaseApp.configure()
 
-        ref = Database.database().reference()
-        
-        ref.child("users").getData(completion:  { error, snapshot in
-          guard error == nil else {
-            print(error!.localizedDescription)
-            return;
-          }
-          let userName = snapshot.value as? String ?? "Unknown";
-        });*/
+        let db = Firestore.firestore()
+
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
+       
     }
     
     static func store(userName: String) {
